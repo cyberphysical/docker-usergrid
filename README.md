@@ -1,5 +1,21 @@
 docker-usergrid
 ===================
+
+		docker-compose up
+
+Cassandra is configured to use a data-only container. Data will persist between docker-compose up's.
+
+Customization
+--------------
+
+You can edit the usergrid-custom.properties file. Private/secret data can be injected with env vars.
+
+
+Old readme
+================
+
+docker-usergrid
+===================
 Base docker image to run a Apache usergrid_ BaaS.
 
 Used elements of [tutum-docker-tomcat](https://github.com/tutumcloud/tutum-docker-tomcat) as Tomcat build manifest.
