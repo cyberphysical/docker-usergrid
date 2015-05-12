@@ -1,9 +1,41 @@
 docker-usergrid
 ===================
 
-		docker-compose up
+## Getting started (mac)
 
+Install [boot2docker](https://docs.docker.com/installation/mac/)
+Install [fig](http://www.fig.sh/install.html)
+
+I got some errors with fig and needed to use the python installation method.
+
+Run the following if boot2docker if it is not already running
+```sh
+boot2docker up
+```
+
+#Get latest code
+
+```sh
+$ git clone https://github.com/cyberphysical/docker-usergrid.git
+$ cd mysplitsecnd
+$ docker-compose up
+```
 Cassandra is configured to use a data-only container. Data will persist between docker-compose up's.
+
+
+##Usergrid GUI
+
+Fig will deploy the GUI on port 3000. You can connect to the dev API as follows:
+
+    http://usergrid.dev:3000?api_url=http://usergrid.dev:8080
+
+You must run the install flow first:
+
+    curl http://192.168.59.103:8080/system/database/setup
+
+The default username and password for development is superuser/password.
+
+Once you're logged in, create a new organization called splitsecnd, and add to that organization a new app called dashboard.
 
 Customization
 --------------
