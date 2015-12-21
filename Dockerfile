@@ -42,6 +42,9 @@ RUN ln -s /usr/share/tomcat7/webapps/ /etc/tomcat7/webapps
 
 RUN curl -sLo /usr/local/bin/ep https://github.com/kreuzwerker/envplate/releases/download/v0.0.5/ep-linux && chmod +x /usr/local/bin/ep
 
+
+ADD usergrid-tools-1.0.1-SNAPSHOT-release.tar.gz /usr/share/usergrid-tools-1.0.1-SNAPSHOT-release.tar.gz
+RUN tar xzvf /usr/share/usergrid-tools-1.0.1-SNAPSHOT-release.tar.gz
 #
 # Port to expose (default for tomcat: 8080)
 #
