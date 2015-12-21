@@ -44,7 +44,7 @@ RUN curl -sLo /usr/local/bin/ep https://github.com/kreuzwerker/envplate/releases
 
 
 ADD usergrid-tools-1.0.1-SNAPSHOT-release.tar.gz /usr/share/usergrid-tools-1.0.1-SNAPSHOT-release.tar.gz
-RUN tar xzvf /usr/share/usergrid-tools-1.0.1-SNAPSHOT-release.tar.gz
+#RUN tar xzvf /usr/share/usergrid-tools-1.0.1-SNAPSHOT-release.tar.gz
 #
 # Port to expose (default for tomcat: 8080)
 #
